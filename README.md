@@ -9,7 +9,7 @@ on the board is 512 MB.
 
 ## Buy
 
-You can purchase a STM32MP135F-DK from https://www.st.com/en/microcontrollers-microprocessors/stm32mp135f.html.
+You can purchase a STM32MP135F-DK from https://www.st.com/en/evaluation-tools/stm32mp135f-dk.html.
 
 ## Benchmark
 
