@@ -64,14 +64,16 @@ void disp_init(void)
   HAL_LTDC_SetAddress(&hltdc, (uint32_t)buf1, 0);
   BSP_LCD_DisplayOn(0);
 
+  lv_display_t * disp;
 #if 1
   __attribute__ ((aligned (32))) static uint8_t buf2[DISP_WIDTH * DISP_HEIGHT * 2];
-  lv_st_ltdc_create_direct(buf1, buf2, 0);
+  disp = lv_st_ltdc_create_direct(buf1, buf2, 0);
 #else
-  static uint16_t parbuf1[DISP_WIDTH * 40];
-  static uint16_t parbuf2[DISP_WIDTH * 40];
-  lv_display_t * disp = lv_st_ltdc_create_partial(parbuf1, parbuf2, sizeof(parbuf1), 0);
+  __attribute__ ((aligned (32))) static uint8_t parbuf1[DISP_WIDTH * 40 * 2];
+  disp = lv_st_ltdc_create_partial(parbuf1, NULL, sizeof(parbuf1), 0);
 #endif
+
+  LV_UNUSED(disp);
 }
 
 /**********************
