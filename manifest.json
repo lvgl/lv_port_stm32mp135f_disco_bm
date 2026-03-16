@@ -37,7 +37,7 @@
     "branches": [
         "release/v9.3"
     ],
-    "image": "https://raw.githubusercontent.com/lvgl/lv_port_stm32mp135f_disco_bm/master/board_images/stm32mp135f-dk.png",
+    "image": "https://raw.githubusercontent.com/lvgl/lv_port_stm32mp135f_disco_bm/refs/heads/master/stm32mp135f-dk.png",
     "getStartedInstructions": "Follow the instructions in README.md to compile and flash the device.",
     "settings": [
         {
